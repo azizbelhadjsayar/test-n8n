@@ -1,0 +1,44 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+% Couleurs
+\definecolor{accent}{HTML}{2E86C1}
+\definecolor{secondary}{HTML}{34495E}
+
+% Personnalisation du corps de lettre
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parskip}{0.75em}
+\setlength{\parindent}{0pt}
+
+% Informations de l'expéditeur
+\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
+\newcommand{\CompanyName}{EY}
+\newcommand{\Position}{Stage DevOps}
+\newcommand{\TodayDate}{30 septembre 2025}
+
+\date{\TodayDate}
+
+\begin{document}
+
+\begin{letter}{\textcolor{accent}{\CompanyName} \\ Service Recrutement}
+
+\opening{Madame, Monsieur,}
+
+Je suis actuellement étudiant en Master informatique, spécialisation DevOps, et je souhaite mettre à profit mes compétences techniques et mon sens de l’initiative au sein de \textcolor{accent}{\CompanyName} pour votre poste de \textbf{\Position}.  
+Au cours de mes précédentes expériences, j’ai pu développer une solide expertise sur les plateformes cloud (AWS, Azure) et sur les outils d’automatisation (Docker, Kubernetes, Terraform, GitLab CI/CD). En parallèle, j’ai mené plusieurs projets de déploiement continu et d’infrastructure as code, ce qui m’a permis de réduire les délais de mise en production de 30 % tout en renforçant la sécurité des pipelines grâce à l’intégration de scans de vulnérabilités et de contrôles d’accès basés sur les rôles.
+
+Ce qui me motive particulièrement à rejoindre \textcolor{accent}{\CompanyName} est votre engagement envers l’innovation et la qualité, ainsi que votre approche collaborative qui favorise l’apprentissage continu. Je suis convaincu que mes compétences techniques, ma capacité à travailler en équipe et ma volonté d’apporter des solutions agiles et sécurisées s’alignent parfaitement avec les valeurs de votre organisation.
+
+Je serais ravi de pouvoir échanger plus en détail sur la manière dont je pourrais contribuer à vos projets et à la réussite de votre équipe. Je vous remercie par avance pour l’attention portée à ma candidature et reste à votre disposition pour un entretien.
+
+\closing{Veuillez agréer, Madame, Monsieur, l’expression de mes salutations distinguées.\\[1ex] \CandidateName}
+
+\end{letter}
+\end{document}
