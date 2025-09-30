@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{enumitem}
+
+\definecolor{header}{RGB}{0,102,204}
+\definecolor{accent}{RGB}{102,102,102}
+
+\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
+\newcommand{\CandidateEmail}{\href{mailto:aziz.belhadj@example.com}{aziz.belhadj@example.com}}
+\newcommand{\CandidatePhone}{+33 6 12 34 56 78}
+\newcommand{\CompanyName}{EY}
+\newcommand{\Position}{Stage DevOps}
+\newcommand{\TodayDate}{30 septembre 2025}
+
+\begin{document}
+
+\begin{letter}{\textcolor{header}{\CompanyName} \\
+Service Recrutement}
+
+\begin{center}
+\textbf{\Large \CandidateName} \\
+\textcolor{accent}{\CandidateEmail} \hspace{2em} \textcolor{accent}{\CandidatePhone}
+\end{center}
+
+\vspace{1em}
+
+\opening{Madame, Monsieur,}
+
+Je me permets de vous adresser ma candidature pour le poste de \textbf{\Position} au sein de \CompanyName. Actuellement étudiant en Master 2 Informatique à l’Université de Paris, je possède une solide expérience en ingénierie DevOps, acquise lors de deux stages de 6 mois respectifs chez \textcolor{accent}{Capgemini} et \textcolor{accent}{Sopra Steria}.
+
+\begin{itemize}[leftmargin=*,labelsep=1em]
+  \item \textbf{Automatisation et CI/CD} : conception et déploiement de pipelines GitLab CI/CD, intégration continue sur AWS et Azure, réduction du temps de livraison de 40 \% grâce à l’orchestration de conteneurs Docker et Kubernetes.
+  \item \textbf{Infrastructure as Code} : mise en place d’infrastructures reproductibles avec Terraform et Ansible, gestion de secrets via HashiCorp Vault.
+  \item \textbf{Surveillance et résilience} : déploiement de solutions Prometheus/Grafana et alertes Slack, mise en place de stratégies de rollback automatisées.
+  \item \textbf{Collaboration inter‑équipes} : accompagnement de développeurs front‑end et back‑end dans la transition vers une architecture micro‑services, rédaction de documentation technique accessible.
+\end{itemize}
+
+Ce qui me motive particulièrement à rejoindre \CompanyName, c’est votre engagement envers l’innovation et la transformation digitale de vos clients. Je suis convaincu que mes compétences techniques, ma capacité à travailler en mode agile et ma passion pour les solutions cloud pourront contribuer efficacement à vos projets de modernisation d’infrastructures.
+
+Je reste à votre disposition pour un entretien afin de détailler davantage mes réalisations et la valeur ajoutée que je pourrais apporter à votre équipe DevOps.
+
+Je vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
+
+\closing{\CandidateName}
+
+\end{letter}
+\end{document}
