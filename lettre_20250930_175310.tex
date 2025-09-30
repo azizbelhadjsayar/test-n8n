@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+% Personal and job information
+\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
+\newcommand{\CompanyName}{EY}
+\newcommand{\Position}{Stage DevOps}
+\newcommand{\TodayDate}{30 septembre 2025}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{blue}{\textbf{\CandidateName}}}
+\fancyhead[R]{\textcolor{blue}{\textbf{Candidature \Position}}}
+\fancyfoot[C]{\textcolor{gray}{\thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Reduce paragraph indentation and add spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex}
+\onehalfspacing
+
+\begin{document}
+
+\begin{letter}{\CompanyName\\ Service Recrutement}
+
+\opening{Madame, Monsieur,}
+
+\textbf{\large Candidature au poste de \Position} \\[1ex]
+Je vous adresse ma candidature avec un vif enthousiasme pour le stage DevOps au sein de \CompanyName. Passionné par les technologies cloud et les pipelines CI/CD, je suis convaincu que mon profil peut contribuer efficacement à votre équipe d'ingénierie.
+
+\medskip
+\textbf{Mon parcours et mes compétences}
+\begin{itemize}
+    \item \textbf{Expérience cloud} : maîtrise d'AWS, Azure et GCP, avec mise en place d'infrastructures auto-scalables.
+    \item \textbf{Automatisation CI/CD} : conception et déploiement de pipelines Jenkins, GitLab CI et GitHub Actions, intégrant tests unitaires, intégration continue et déploiement continu.
+    \item \textbf{Gestion de configuration} : utilisation de Terraform, Ansible et Helm pour la provision de ressources et la configuration d’applications.
+    \item \textbf{Surveillance et sécurité} : mise en œuvre d’outils Prometheus, Grafana et OpenTelemetry, ainsi que de pratiques de sécurité DevSecOps.
+\end{itemize}
+
+\medskip
+\textbf{Pourquoi EY ?}
+\begin{itemize}
+    \item \textbf{Innovation continue} : EY est reconnue pour ses projets de transformation digitale et son engagement envers les dernières technologies.
+    \item \textbf{Équipe collaborative} : travailler aux côtés de professionnels expérimentés est une opportunité d’apprentissage et de partage de connaissances.
+    \item \textbf{Impact concret} : contribuer à des solutions cloud pour des clients internationaux me permettrait de mettre en pratique mes compétences dans un contexte réel et stimulant.
+\end{itemize}
+
+\medskip
+Je suis persuadé que mon enthousiasme, ma rigueur et ma capacité à apprendre rapidement feront de moi un atout pour votre équipe. Je reste à votre disposition pour un entretien afin de discuter de ma candidature plus en détail.
+
+\closing{Veuillez agréer, Madame, Monsieur, l’expression de mes salutations distinguées.}
+
+\end{letter}
+\end{document}
