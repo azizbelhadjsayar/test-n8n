@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{setspace}
+
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+\linespread{1.15}
+
+\definecolor{accent}{RGB}{0, 102, 204}
+\definecolor{headerbg}{RGB}{230, 242, 255}
+
+\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
+\newcommand{\CompanyName}{EY}
+\newcommand{\Position}{Stage DevOps}
+\newcommand{\TodayDate}{30 septembre 2025}
+
+\begin{document}
+
+\begin{letter}{\textbf{\CompanyName}\\Service Recrutement}
+\opening{Madame, Monsieur,}
+
+\begin{center}
+\colorbox{headerbg}{%
+\parbox{\textwidth}{%
+\centering
+\Huge\textcolor{accent}{\CandidateName}\\[0.3em]
+\Large\textcolor{accent}{Stage DevOps}\\[0.3em]
+\small\TodayDate
+}
+}
+\end{center}
+
+\vspace{1em}
+
+Je me permets de vous adresser ma candidature pour le poste de \textbf{\Position} au sein de \CompanyName.  
+Passionné par le DevOps, j’ai acquis une solide expérience dans les environnements cloud (AWS, Azure) et la mise en place de pipelines CI/CD (GitLab CI, Jenkins, GitHub Actions).  
+
+Au cours de mon dernier projet chez \textit{[Nom de l’entreprise précédente]}, j’ai piloté l’automatisation des déploiements de micro‑services, réduisant le temps de release de 40 % tout en garantissant une haute disponibilité. Mon expertise en conteneurisation (Docker, Kubernetes) et en gestion de l’infrastructure as code (Terraform, Ansible) m’a permis de sécuriser les flux de travail et d’améliorer la traçabilité des opérations.  
+
+Je suis convaincu que mes compétences techniques, ma rigueur et ma capacité à travailler en collaboration avec les équipes de développement et d’exploitation seraient un atout pour \CompanyName. Je souhaite contribuer à la réussite de vos projets en apportant des solutions agiles, sécurisées et évolutives.  
+
+Je reste à votre disposition pour un entretien afin de détailler plus amplement ma motivation et mes réalisations.  
+
+\closing{Veuillez agréer, Madame, Monsieur, l’expression de mes salutations distinguées.}
+
+\end{letter}
+\end{document}
