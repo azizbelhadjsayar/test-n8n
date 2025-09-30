@@ -1,0 +1,46 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textcolor{gray}{\textbf{Aziz BELHADJ SAYAR}}}
+\rhead{\textcolor{gray}{\today}}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
+\newcommand{\CompanyName}{EY}
+\newcommand{\Position}{Stage DevOps}
+\newcommand{\TodayDate}{30 septembre 2025}
+
+\begin{document}
+
+\begin{letter}{\CompanyName \\ Service Recrutement \\ 2, rue de l’Innovation \\ 75015 Paris}
+
+\opening{Madame, Monsieur,}
+
+Je vous adresse ma candidature pour le poste de \textbf{\Position} au sein de \CompanyName, convaincu que mon profil technique et ma passion pour l’automatisation des processus peuvent contribuer à la réussite de vos projets cloud.  
+Titulaire d’une licence en Informatique, j’ai développé, au cours de mes deux dernières expériences professionnelles, des pipelines CI/CD robustes sur AWS et Azure, et orchestré des déploiements Kubernetes à haute disponibilité.  
+
+\begin{itemize}[leftmargin=*, label={--}]
+\item \textbf{Infrastructure as Code} : maîtrise de Terraform, CloudFormation et Ansible, permettant une configuration reproductible et auditable.
+\item \textbf{Automatisation CI/CD} : conception de pipelines GitLab CI, Jenkins et GitHub Actions, réduisant le cycle de livraison de 40 \%.
+\item \textbf{Sécurité et conformité} : implémentation de scanners de vulnérabilités (Trivy, Snyk) et de politiques IAM strictes.
+\item \textbf{Monitoring et observabilité} : déploiement de Prometheus, Grafana et ELK Stack pour une visibilité en temps réel.
+\end{itemize}
+
+Mon approche orientée résultat, ma capacité à collaborer avec des équipes multidisciplinaires et ma curiosité pour les nouvelles technologies font de moi un candidat idéal pour soutenir les initiatives d’innovation d’EY.  
+
+Je serais ravi de pouvoir échanger avec vous lors d’un entretien afin de détailler comment mes compétences peuvent répondre aux besoins de votre équipe DevOps.  
+
+Je vous remercie par avance pour l’attention que vous porterez à ma candidature et vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.  
+
+\closing{\CandidateName \\ \href{mailto:aziz.belhadj@example.com}{aziz.belhadj@example.com} \\ +33 6 12 34 56 78}
+
+\end{letter}
+\end{document}
