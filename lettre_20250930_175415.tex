@@ -1,0 +1,46 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdfborder={0 0 0}
+}
+\definecolor{companycolor}{RGB}{0,102,204}
+\definecolor{headercolor}{RGB}{0,102,204}
+\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
+\newcommand{\CandidateTitle}{Développeur DevOps}
+\newcommand{\CompanyName}{EY}
+\newcommand{\Position}{Stage DevOps}
+\newcommand{\TodayDate}{30 septembre 2025}
+\begin{document}
+\begin{letter}{\CompanyName\\ Service Recrutement}
+\opening{Madame, Monsieur,}
+% Header bar
+\vspace{-1cm}
+\noindent\colorbox{headercolor}{\parbox{\dimexpr\linewidth-2\fboxsep}{\textcolor{white}{\Large \textbf{\CandidateName} – \CandidateTitle}}}
+\vspace{1cm}
+\noindent
+% Body
+Je me permets de vous adresser ma candidature pour le poste de \textbf{\Position} au sein de \textcolor{companycolor}{\CompanyName}. Passionné par le DevOps, je possède une solide expérience en gestion d’infrastructures cloud (AWS, Azure, GCP) et en mise en place de pipelines CI/CD (GitLab CI, GitHub Actions, Jenkins).  
+Mon parcours m’a permis de :
+\begin{itemize}[leftmargin=*,labelsep=1em]
+    \item Automatiser la création de 200+ environnements de test, réduisant le temps de déploiement de 60\% chez mon dernier employeur.
+    \item Concevoir et déployer une architecture Kubernetes multi‑cloud, assurant une haute disponibilité et une scalabilité horizontale.
+    \item Mettre en place des scripts Terraform et Ansible pour garantir la conformité et la reproductibilité des déploiements.
+    \item Former une équipe de 5 développeurs aux bonnes pratiques DevOps, augmentant la productivité de 35\%.
+\end{itemize}
+Je suis convaincu que mon expertise technique et ma capacité à travailler en collaboration avec les équipes de développement et d’infrastructure seraient un atout majeur pour \textcolor{companycolor}{\CompanyName}.  
+Je me tiens à votre disposition pour un entretien afin de discuter plus en détail de ma motivation et de la valeur que je pourrais apporter à votre équipe.
+\closing{Je vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.}
+\vspace{1cm}
+\signature{\CandidateName\\\href{mailto:aziz.belhadj@example.com}{aziz.belhadj@example.com} – \href{tel:+33123456789}{+33 1 23 45 67 89}\\\href{https://www.linkedin.com/in/azizbelhadj}{LinkedIn} – \href{https://github.com/azizbelhadj}{GitHub}}
+\end{letter}
+\end{document}
