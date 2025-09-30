@@ -1,30 +1,138 @@
-
-\documentclass[11pt,a4paper]{letter}
+\documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
 \usepackage{geometry}
-\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{dashrule}
 \usepackage{hyperref}
+\usepackage{adjustbox}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
 
-\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
-\newcommand{\CompanyName}{EY}
-\newcommand{\Position}{Stage DevOps}
-\newcommand{\TodayDate}{30 septembre 2025
+% --- Colours ---
+\definecolor{darkgray}{rgb}{0.45,0.45,0.45}
+\definecolor{NTNU_blue}{HTML}{2E5AAC}
+\definecolor{Overleaf_green}{HTML}{46A247}
+\colorlet{icons}{Overleaf_green}
+\colorlet{soft_text}{darkgray}
+\newcommand{\softtext}[1]{\textcolor{soft_text}{#1}}
+\newcommand{\softbullet}{\softtext{\small\textbullet}\hspace{0.5em}}
+\newcommand{\veritem}[1]{\softbullet#1\hspace{1em}}
+
+% --- Document adjustments ---
+\geometry{
+        left=23mm,
+        right=23mm, 
+        bindingoffset=0mm, 
+        top=20mm,
+        bottom=20mm
+}
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+\newcommand{\dotline}{\noindent\textcolor{soft_text}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}\medskip}
+
+\hypersetup{hidelinks}
+
+% --- Commands for e-mail, phone, name, address, signature ---
+\newcommand\ProvideEmail[1]{\expandafter\newcommand\csname Email\endcsname{\href{mailto:#1}{#1}}}
+\renewcommand\date[2]{\@namedef{Date#2}{#1}}
+\newcommand\ProvideAdress[3]{\expandafter\newcommand\csname Adress#3\endcsname{#1, #2}}
+\newcommand\ProvidePhone[2]{\expandafter\newcommand\csname Phone#2\endcsname{#1}}
+\newcommand\ProvideName[2]{\expandafter\newcommand\csname Name#2\endcsname{#1}}
+\newcommand\Signature[3]{#1 \\
+\begin{minipage}{0.6\textwidth}
+\vspace{\baselineskip}
+\includegraphics[#3]{#2}
+\end{minipage} 
+\vspace{\baselineskip} \\
+\makeatletter
+\@author
+\makeatother
+}
+\newcommand{\SignatureLine}[2]{#1 \\
+\begin{minipage}{0.6\textwidth}
+\vspace{3\baselineskip}
+\makebox[#2]{\hrulefill}
+\end{minipage} 
+\vspace{\baselineskip} \\
+\makeatletter
+\@author
+\makeatother
 }
 
+% --- Section formatting ---
+\renewcommand{\section}{\@ifstar\@section\@@section}
+\newcommand{\@section}[1]{\bigskip{\LARGE\MakeUppercase{#1}}\\[-1ex]\linia\medskip}
+\newcommand{\@@section}[1]{\bigskip{\LARGE\MakeUppercase{#1}}\\[-1ex]\linia\medskip}
+\renewcommand{\subsection}[1]{\smallskip{\large\bfseries{#1}\par}\medskip}
+
+\AtBeginDocument{\hypersetup{hidelinks}}
+
+% --- Preamble: headers, footers, title ---
+\setcounter{secnumdepth}{0}
+\setlength{\parskip}{2\baselineskip plus2pt}
+\setlength{\parindent}{2pt}
+\pagestyle{empty}
+
+\cfoot{Side \thepage\ av\ \pageref*{LastPage}}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\makeatletter
+\let \Author\@author
+\let \Title \@title
+
+\renewcommand{\maketitle}{
+\noindent
+\vspace{1ex}
+\begin{minipage}{\textwidth}
+ \@author \\ \AdressI \\ \Email \\ \PhoneI
+ 
+ \vspace{2\baselineskip}
+ \NameI \\ \AdressII 
+\begin{flushright}
+\vspace{-1.7\baselineskip}
+\DateI
+\end{flushright}
+\end{minipage} \hfill
+
+\vspace{2ex}
+}
+\makeatother
+
+% --- Fill in your information ---
+\author{Firstname Lastname}
+\ProvideAdress{Streetname 11}{0000 City}{I}
+\ProvideEmail{example@hotmail.com}
+\ProvidePhone{+47 000 00 000}{I}
+\ProvideName{Company /v Person}{I}
+\ProvideAdress{Streetname 14}{1111 City}{II}
+\date{02.10.2022}{I}
+
+% --- Begin document ---
 \begin{document}
+\maketitle
 
-\begin{letter}{\CompanyName \\ Service Recrutement}
+% --- Main text ---
+\section{Job Application Letter}
 
-\opening{Cher recruteur,}
+\lipsum[1]\par
+\lipsum[2]\par
+\softtext{\lipsum[3]}
 
-Je me permets de vous adresser ma candidature pour le poste de \textbf{\Position} au sein de \CompanyName.  
-Passionné par le DevOps et fort d’une expérience dans les environnements cloud et CI/CD, je souhaite mettre mes compétences au service de votre équipe.
+% --- Horizontal line ---
+\par
+\dotline
+\vspace{\baselineskip}
 
-Je vous remercie pour l’attention portée à ma candidature et vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
+% --- Attachments ---
+\textit{Attachments: CV, grades, certificate (2019), Id}
+\par
 
-\closing{\CandidateName}
+% --- Signature ---
+\SignatureLine{Sincerely,}{7cm}
 
-\end{letter}
 \end{document}
