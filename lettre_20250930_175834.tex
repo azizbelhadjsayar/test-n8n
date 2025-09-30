@@ -1,0 +1,48 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{parskip}
+
+% Hyperlink colours
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue
+}
+
+% Custom commands
+\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
+\newcommand{\CompanyName}{EY}
+\newcommand{\Position}{Stage DevOps}
+\newcommand{\TodayDate}{30 septembre 2025}
+\newcommand{\ContactInfo}{aziz.belhadj@example.com \textbar{} +33~6~12~34~56~78}
+
+\begin{document}
+\begin{letter}{\CompanyName\\ Service Recrutement}
+\opening{Madame, Monsieur,}
+
+\begin{center}
+\textbf{\Large \CandidateName}\\
+\color{gray}\ContactInfo
+\end{center}
+
+\vspace{0.5cm}
+
+Je me permets de vous adresser ma candidature pour le poste de \textbf{\Position} au sein de \CompanyName. Passionné par le DevOps et disposant d’une solide expérience dans les environnements cloud (AWS, Azure, GCP) et dans la mise en place de pipelines CI/CD (GitLab CI, Jenkins, GitHub Actions), je suis convaincu que mes compétences techniques et ma capacité à travailler en collaboration avec les équipes de développement et d’infrastructure seront un atout pour votre organisation.
+
+Au cours de mes précédentes missions, j’ai piloté la migration d’une application monolithique vers une architecture micro‑services, en automatisant le déploiement et en assurant la scalabilité via Kubernetes. J’ai également implémenté des solutions de monitoring (Prometheus, Grafana) et de gestion des logs (ELK), ce qui a permis de réduire les temps de résolution des incidents de 30 %. Ma démarche orientée résultat et ma curiosité pour les nouvelles technologies me poussent à rester à la pointe des pratiques DevOps.
+
+Je serais honoré de pouvoir contribuer à l’excellence opérationnelle d’EY et de participer aux projets d’innovation que vous réalisez. Je me tiens à votre disposition pour un entretien afin de détailler mes réalisations et la valeur que je peux apporter à votre équipe.
+
+Je vous remercie par avance pour l’attention portée à ma candidature et vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
+
+\closing{\CandidateName}
+\end{letter}
+\end{document}
