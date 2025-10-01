@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{parskip}
+
+% Couleurs
+\definecolor{titlecol}{RGB}{0,102,204}
+\definecolor{bodycol}{RGB}{0,0,0}
+\definecolor{footercol}{RGB}{0,102,204}
+
+% Informations
+\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
+\newcommand{\CompanyName}{EY}
+\newcommand{\Position}{Stage DevOps}
+\newcommand{\TodayDate}{01 octobre 2025}
+
+\begin{document}
+
+\begin{letter}{\CompanyName \\ Service Recrutement}
+
+\opening{\color{titlecol}\textbf{Objet : Candidature au poste de \Position}}
+
+\begin{center}
+    \color{titlecol}\Large \CandidateName\\[0.5em]
+    \href{mailto:aziz@example.com}{aziz@example.com} | 06~12~34~56~78
+\end{center}
+
+Madame, Monsieur,
+
+Je vous adresse ma candidature pour le poste de \textbf{\Position} au sein de \CompanyName. Passionné par le DevOps, je possède une expérience solide dans la conception, le déploiement et la maintenance d’infrastructures cloud (AWS, Azure, GCP) ainsi que dans la mise en place de pipelines CI/CD (GitLab CI, Jenkins, GitHub Actions).  
+
+Au cours de mon dernier stage chez \textit{Tech Solutions}, j’ai dirigé la migration d’une application monolithique vers une architecture microservices Dockerisée, réduisant le temps de déploiement de 70~\% et augmentant la disponibilité de 99,9~\%. J’ai également automatisé la gestion des secrets avec HashiCorp Vault et instauré des pratiques de monitoring avec Prometheus et Grafana, ce qui a permis de détecter et résoudre les incidents plus rapidement.
+
+EY, reconnu pour son approche d’innovation et d’excellence en matière de conseil technologique, représente l’environnement idéal pour mettre à profit mes compétences et contribuer à vos projets d’infrastructure moderne. Je suis particulièrement attiré par votre engagement envers la transformation digitale et votre culture d’apprentissage continu.
+
+Je serais honoré de pouvoir discuter plus en détail de la façon dont je pourrais contribuer à votre équipe. Vous trouverez ci-joint mon curriculum vitae détaillant mes expériences et projets.
+
+Je vous remercie de l’attention portée à ma candidature et vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
+
+\closing{\CandidateName\\[0.5em]
+\color{footercol}\href{mailto:aziz@example.com}{aziz@example.com} | 06~12~34~56~78}
+
+\end{letter}
+\end{document}
