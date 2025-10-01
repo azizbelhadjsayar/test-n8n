@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+
+% Couleurs
+\definecolor{headercolor}{HTML}{2E86C1}
+\definecolor{accentcolor}{HTML}{1F618D}
+\definecolor{textcolor}{HTML}{2F4F4F}
+
+% Informations du candidat
+\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
+\newcommand{\CandidateAddress}{12 Rue de la République, 75002 Paris}
+\newcommand{\CandidatePhone}{+33 6 12 34 56 78}
+\newcommand{\CandidateEmail}{aziz.belhadj@example.com}
+\newcommand{\CandidateWebsite}{\href{https://www.linkedin.com/in/azizbelhadj}{LinkedIn}}
+
+% Entreprise cible
+\newcommand{\CompanyName}{EY}
+\newcommand{\CompanyAddress}{EY France – 4, rue de la Paix, 75002 Paris}
+\newcommand{\Position}{Stage DevOps}
+\newcommand{\TodayDate}{01 octobre 2025}
+
+% Signature
+\signature{\CandidateName\\\CandidateAddress\\\CandidatePhone\\\CandidateEmail\\\CandidateWebsite}
+
+\begin{document}
+
+% En-tête
+\begin{center}
+  \vspace{-2cm}
+  \colorbox{headercolor}{\parbox{\dimexpr\textwidth-2cm}{%
+      \centering
+      \textcolor{white}{\bfseries \large \CandidateName}\\[2pt]
+      \textcolor{white}{\CandidateAddress}\\
+      \textcolor{white}{\CandidatePhone} \quad | \quad
+      \textcolor{white}{\CandidateEmail} \quad | \quad
+      \textcolor{white}{\CandidateWebsite}
+  }}
+  \vspace{1.5cm}
+\end{center}
+
+\begin{letter}{\CompanyName\\\CompanyAddress}
+
+\opening{Madame, Monsieur,}
+
+Je vous adresse ma candidature pour le poste de \textbf{\Position} au sein de \CompanyName.  
+Actuellement étudiant en Master DevOps à l’Université de Paris, j’ai acquis une solide expérience dans la conception, la mise en place et la maintenance de pipelines CI/CD (GitLab CI, Jenkins, GitHub Actions) ainsi que dans la gestion d’infrastructures cloud (AWS, Azure, GCP).  
+
+Au cours de mon dernier stage chez \textcolor{accentcolor}{Acme Corp}, j’ai dirigé la migration d’une architecture monolithique vers une solution micro‑services orchestrée par Kubernetes, réduisant les temps de déploiement de 70~\% et améliorant la résilience des services. Cette expérience m’a permis de développer une approche centrée sur l’automatisation, la sécurité et la performance, des compétences que je souhaite mettre au service de votre équipe DevOps.  
+
+Ce qui me motive particulièrement à rejoindre EY, c’est votre engagement envers l’innovation et l’excellence opérationnelle. Je suis convaincu que ma capacité à combiner expertise technique, sens de l’optimisation et travail collaboratif s’inscrira parfaitement dans vos projets d’infrastructure cloud à grande échelle.  
+
+Je me tiens à votre disposition pour un entretien afin de discuter plus en détail de la valeur que je pourrais apporter à votre équipe.  
+
+Je vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
+
+\closing{}
+
+\end{letter}
+\end{document}
