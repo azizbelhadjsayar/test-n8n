@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+% Couleurs
+\definecolor{headercolor}{RGB}{0, 102, 204}
+\definecolor{accent}{RGB}{255, 102, 0}
+
+% Informations du candidat
+\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
+\newcommand{\CandidateTitle}{Étudiant en Master 2 Informatique}
+\newcommand{\CandidateAddress}{12 Rue de l’Innovation, 75012 Paris}
+\newcommand{\CandidatePhone}{+33 6 12 34 56 78}
+\newcommand{\CandidateEmail}{aziz.belhadj@example.com}
+\newcommand{\CompanyName}{EY}
+\newcommand{\Position}{Stage DevOps}
+\newcommand{\RecruitmentUnit}{Service Recrutement}
+\newcommand{\TodayDate}{01 octobre 2025}
+
+% En-tête personnalisé
+\newcommand{\Header}{
+  \begin{center}
+    {\Large\textcolor{headercolor}{\CandidateName}}\\[0.2cm]
+    {\small \CandidateTitle}\\[0.1cm]
+    \texttt{\CandidateAddress}\\
+    \texttt{\CandidatePhone\ \ \ \ CandidateEmail}\\[0.4cm]
+    \rule{\linewidth}{0.4pt}
+  \end{center}
+}
+
+% Mise en page du corps
+\begin{document}
+
+\Header
+
+\begin{letter}{\CompanyName \\ \RecruitmentUnit}
+
+\opening{Madame, Monsieur,}
+
+Actuellement étudiant en Master 2 d’informatique à l’Université Paris-Saclay, je suis à la recherche d’un stage de six mois en DevOps, afin de mettre en pratique mes compétences techniques et de contribuer à des projets d’envergure.  
+Passionné par l’automatisation, la sécurité et l’optimisation des flux de travail, j’ai acquis une solide expérience dans les environnements cloud (AWS, Azure) et les pipelines CI/CD (GitLab CI, Jenkins, GitHub Actions). Mon projet de fin d’études, consistant à concevoir une plateforme de déploiement continu pour une application microservices, m’a permis de maîtriser Terraform, Docker, Kubernetes et Helm, tout en respectant les bonnes pratiques de sécurité (scan SAST/DAST, gestion des secrets).
+
+Je suis convaincu que mon profil technique, mon sens de l’organisation et ma capacité à collaborer avec des équipes multidisciplinaires seraient des atouts majeurs pour votre service.  
+Je souhaite rejoindre EY pour participer à des projets innovants, apprendre auprès de professionnels reconnus et contribuer à l’amélioration continue des processus DevOps au sein de votre organisation.
+
+Je me tiens à votre disposition pour un entretien, afin de détailler comment je pourrais apporter une valeur ajoutée à votre équipe.  
+Je vous remercie par avance pour l’attention portée à ma candidature.
+
+\closing{Je vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.}
+
+\end{letter}
+
+\end{document}
