@@ -1,0 +1,49 @@
+\documentclass[11pt,a4paper]{letter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+% Couleurs
+\definecolor{companyblue}{RGB}{0,102,204}
+\definecolor{lettergray}{gray}{0.4}
+
+% Variables
+\newcommand{\CandidateName}{Aziz BELHADJ SAYAR}
+\newcommand{\CompanyName}{EY}
+\newcommand{\Position}{Stage DevOps}
+\newcommand{\TodayDate}{\today}
+
+\begin{document}
+
+\begin{letter}{\textcolor{companyblue}{\CompanyName}\\ Service Recrutement}
+
+\opening{Madame, Monsieur,}
+
+Je vous adresse ma candidature pour le poste de \textbf{\Position} au sein de \textcolor{companyblue}{\CompanyName}.  
+Passionné par l’ingénierie DevOps, j’ai consolidé mes compétences au cours de plusieurs projets de déploiement continu et d’automatisation cloud, notamment sur AWS, Azure et GCP.  
+
+Voici quelques éléments qui illustrent ma capacité à contribuer efficacement à votre équipe :
+
+\begin{itemize}[leftmargin=*, label={--}]
+  \item \textbf{Automatisation CI/CD :} Conception et mise en place de pipelines GitLab CI intégrant tests unitaires, analyse statique de code et déploiement automatisé en environnements de test et de production.  
+  \item \textbf{Infrastructure as Code :} Gestion d’infrastructures via Terraform et Ansible, réduisant le temps de provisioning de 70 % et garantissant la traçabilité des changements.  
+  \item \textbf{Surveillance et résilience :} Implémentation de Prometheus/Grafana et d’alertes Slack, assurant une visibilité continue et une réponse rapide aux incidents.  
+  \item \textbf{Sécurité et conformité :} Intégration d’outils SAST/DAST (SonarQube, OWASP ZAP) dans les pipelines, renforçant la posture sécurité des applications.  
+\end{itemize}
+
+Je suis convaincu que mon approche structurée, ma curiosité technique et ma capacité à collaborer étroitement avec les équipes de développement et d’opérations font de moi un candidat idéal pour ce stage.  
+Je serais ravi de pouvoir discuter plus en détail de la manière dont je peux soutenir les projets innovants de \textcolor{companyblue}{\CompanyName}.
+
+Je vous remercie de l’attention portée à ma candidature et vous prie d’agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
+
+\closing{\CandidateName}
+
+\end{letter}
+
+\end{document}
