@@ -1,89 +1,119 @@
-\documentclass[a4paper,11pt]{article}
-
-% --- Page geometry ---
-\usepackage[a4paper, margin=1cm]{geometry}
-
-% --- Encoding and fonts ---
-\usepackage[utf8]{inputenc}
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
-
-% --- Colors and graphics ---
+\usepackage[utf8]{inputenc}
+\usepackage{array}
 \usepackage{xcolor}
-\usepackage{tikz}
-\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
+\usepackage{pifont}
+\usepackage{amssymb}
 
-% --- Section style ---
-\definecolor{sectioncolor}{RGB}{0, 102, 204} % section highlight color
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}  % pour position libre de l'image
+\usepackage{luacode}
 
-\newcommand{\sectionformat}[1]{%
-  \begin{tikzpicture}
-    \node[
-      fill=sectioncolor,
-      rounded corners=6pt,
-      text width=\dimexpr\textwidth-2\fboxsep\relax,
-      align=center,
-      inner sep=6pt
-    ] {\MakeUppercase{#1}};
-  \end{tikzpicture}%
-}
+\setlength{\parindent}{0pt}
 
+% === STYLE DES SECTIONS ===
+\usepackage{titlesec}
 \titleformat{\section}
-  {\centering\Large\bfseries\color{white}}
+  {\large\bfseries}
   {}
   {0pt}
-  {\sectionformat}
-
-\titlespacing*{\section}{0pt}{0.8em}{0em}
-
-% --- Compact lists ---
-\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=*}
-\setlist[enumerate]{noitemsep, topsep=0pt, leftmargin=*}
-
-% --- Experience entry macro (balanced spacing) ---
-\newcommand{\experience}[4]{%
-  \noindent
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lr}
-    \textbf{#1} & \textbf{#2} \\[-0.1em] % subtle tightening
-    \textit{#3} & \textit{#4} \\
-  \end{tabular*}\vspace{0.15em} % small breathing space below
-}
+  {}[\vspace{-0.2cm}\rule{\textwidth}{2pt}]
+\titlespacing*{\section}{0pt}{15pt}{0pt}
 
 \begin{document}
 
-\section{Education}
-Bachelor of Science in Computer Engineering, XYZ University (2018–2022)\\
-Graduated with honors. GPA: 3.8/4.0
+% ==== Télécharger l'image depuis GitHub RAW avec Lua ====
+\begin{luacode*}
+local url = "https://raw.githubusercontent.com/azizbelhadjsayar/azizbelhadjsayar.github.io/main/images/profilepic.jpg"
+local http = require("socket.http")
+local body, code = http.request(url)
 
-\section{Experience}
+if code == 200 then
+  local f = io.open("tempimg.jpg","wb")
+  f:write(body)
+  f:close()
+else
+  tex.print("Impossible de télécharger l'image : "..code)
+end
+\end{luacode*}
 
-\experience{ABC Corporation}{New York, USA}{Software Engineer}{2022–Present}
-\begin{itemize}
-  \item Developed backend APIs and improved system efficiency by 25\%.
-  \item Led migration to a microservices architecture.
+% ==== Afficher l'image devant le texte à la position souhaitée ====
+\begin{textblock*}{3cm}(14cm,0.5cm) % largeur x hauteur, position (x,y) en cm
+\includegraphics[width=3cm]{tempimg.jpg}
+\end{textblock*}
+
+% ==== HEADER ====
+{\Huge\bfseries AZIZ BELHADJ SAYAR}\\[2pt]
+{\large Computer Science Student}\\[0pt]
+
+% ==== Coordonnées ====
+\renewcommand{\arraystretch}{0.9}
+\setlength{\tabcolsep}{6pt}
+\noindent
+\begin{tabular*}{0.8\textwidth}{@{\extracolsep{\fill}} l l l}
+    \textcolor{blue}{\ding{37}} +33 6 12 34 56 78 & 
+    \textcolor{red}{\ding{43}} Paris, France & 
+    \textcolor{teal}{\href{https://github.com/azizbelhadj}{\ding{202} github.com/azizbelhadj}} \\
+    \textcolor{orange}{\Letter} \href{mailto:aziz.belhadj@example.com}{aziz.belhadj@example.com} & 
+    \textcolor{cyan}{\ding{70}} \href{https://linkedin.com/in/azizbelhadj}{linkedin.com/in/azizbelhadj} & 
+    \textcolor{purple}{\ding{43}} \href{https://portfolio.aziz.dev}{portfolio.aziz.dev} \\
+\end{tabular*}
+
+\vspace{0cm}
+
+% ==== Sections du CV ====
+\section*{Profil}
+Étudiant passionné par la Business Intelligence et le développement logiciel, 
+actuellement en Master 1 Software Engineering for the Web à l’Université Paris-Saclay.
+
+\section*{Formation}
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{Université Paris-Saclay} & \textbf{Paris, France} \\
+\textbf{Master 1 Software Engineering for the Web} & \textbf{2024 -- 2025} \\
+\end{tabular*}
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=0pt,parsep=0pt,label=\textcolor{blue}{$\rightarrow$}]
+    \item Modules principaux : Software Engineering, Web Development, Databases
+    \item Projet de fin d'études en développement d'application Web avec Python/Angular
 \end{itemize}
 
-\experience{TechNova Ltd.}{Berlin, Germany}{Backend Developer Intern}{2021–2022}
-\begin{itemize}
-  \item Built internal dashboards and automated reports using Python and Flask.
-  \item Collaborated with a global team to refactor API endpoints.
+\vspace{0.2cm}
+
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{IHEC Carthage} & \textbf{Tunis, Tunisie} \\
+\textbf{Licence en Informatique de Gestion (Business Intelligence)} & \textbf{2021--2024} \\
+\end{tabular*}
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=0pt,parsep=0pt,label=\textcolor{red}{$\rightarrow$}]
+    \item Modules principaux : Business Intelligence, SQL, Data Analysis
+    \item Projets : analyse de données réelles, dashboard interactif avec Python
 \end{itemize}
 
-\section{Skills}
-\begin{itemize}
-  \item Programming: Python, C++, Java
-  \item Tools: Git, Docker, Linux
-  \item Languages: English, Spanish
+\section*{Expérience Professionnelle}
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{Tech Solutions} & \textbf{Paris, France} \\
+\textbf{Développeur Web Junior} & \textbf{2023--2024} \\
+\end{tabular*}
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=0pt,parsep=0pt,label=\textcolor{green}{$\rightarrow$}]
+    \item Développement d’une application web interne en Python/Angular
+    \item Maintenance et optimisation de bases de données SQL
+    \item Collaboration avec l’équipe BI pour l’analyse de données
 \end{itemize}
 
-\section{Projects}
-\textbf{Portfolio Website} — Built with React and Node.js to showcase personal work.\\
-\textbf{Data Analysis Dashboard} — Created interactive analytics using Python and Plotly.
-
-\section{Contact}
-Email: yourname@email.com\\
-LinkedIn: linkedin.com/in/yourname\\
-Phone: +1 234 567 8901
+\section*{Projets}
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{Dashboard interactif Python} & \textbf{2024} \\
+\end{tabular*}
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=0pt,parsep=0pt,label=\textcolor{orange}{$\rightarrow$}]
+    \item Création d’un dashboard interactif pour l’analyse de données réelles
+\end{itemize}
 
 \end{document}
