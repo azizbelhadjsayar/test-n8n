@@ -46,8 +46,24 @@
 \pagestyle{empty} 
 
 % ==== Photo ====
-\begin{textblock*}{3cm}(16.5cm,0.83cm)
-\includegraphics[width=3.5cm]{Profil-removebg.png}
+% ==== Photo (Rounded on right side) ====
+\begin{textblock*}{3.6cm}(16.2cm,0.7cm)
+\begin{tcolorbox}[
+    colback=blue!10,         % same background as header
+    colframe=blue!10,        % no visible border difference
+    boxrule=0pt,             % remove border line
+    enhanced,                % allows per-corner customization
+    sharp corners=north west,% top-left corner sharp
+    sharp corners=south west,% bottom-left corner sharp
+    rounded corners=north east,% top-right rounded
+    rounded corners=south east,% bottom-right rounded
+    arc=12pt,                % roundness amount
+    width=3.5cm,
+    height=3.5cm,
+    center, valign=center
+]
+\includegraphics[width=3.4cm]{Profil-removebg.png}
+\end{tcolorbox}
 \end{textblock*}
 
 % ==== Header inside a rounded box ====
