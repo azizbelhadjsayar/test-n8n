@@ -18,14 +18,16 @@
 \usepackage{contour}
 \contourlength{0.6pt} % thickness of the outline
 
+\usepackage[HTML]{xcolor}
+
 \setlength{\parindent}{0pt}
 
 % ==== Rounded colored section titles ====
 \newcommand{\SectionBox}[1]{%
 \vspace{6pt}
 \begin{tcolorbox}[
-    colback=blue!15,    % background color
-    colframe=blue!15,   % border same as background
+    colback=black!10,    % background color
+    colframe=black!10,   % border same as background
     boxrule=0pt,        % no visible border
     arc=8pt,            % rounded corners
     left=5pt, right=5pt, top=4pt, bottom=4pt,
@@ -44,20 +46,21 @@
 \newcommand{\ExperienceSection}[0]{\SectionBox{PROFESSIONAL EXPERIENCE}}
 \newcommand{\ProjectsSection}[0]{\SectionBox{PROJECTS}}
 \newcommand{\CertificationsSection}[0]{\SectionBox{CERTIFICATIONS}}
+\newcommand{\SkillsSection}[0]{\SectionBox{SKILLS}} % <-- NEW COMMAND
 \newcommand{\LanguagesSection}[0]{\SectionBox{LANGUAGES}}
 
 \begin{document}
 \pagestyle{empty} 
 
 % ==== Photo ====
-\begin{textblock*}{3cm}(16.7cm,0.85cm)
+\begin{textblock*}{3cm}(16.7cm,0.84cm)
 \includegraphics[width=3.3cm]{Profil-removebg.png}
 \end{textblock*}
 
 % ==== Header inside a rounded box ====
 \begin{tcolorbox}[
-    colback=blue!10,       % background color
-    colframe=blue!15,      % border color
+    colback=black!10,       % background color
+    colframe=black!10,      % border color
     arc=10pt,              % rounded corners (all sides)
     boxrule=0pt,           % no visible border
     width=\textwidth,      % full page width
@@ -68,13 +71,13 @@
 
 \renewcommand{\arraystretch}{0.9}
 \setlength{\tabcolsep}{6pt}
-{\fontsize{9.5}{10}\selectfont
+{\fontsize{9}{10}\selectfont
 \begin{tabular*}{0.6\textwidth}{@{\extracolsep{\fill}} l l l}
-    \textcolor{blue}{\faPhone} +33 6 52 64 32 02 &
-    \textcolor{blue}{\faLinkedin} \href{https://linkedin.com/in/azizbelhadjsayar}{linkedin.com/in/azizbelhadjsayar} &
-    \textcolor{blue}{\faEnvelope} \href{mailto:aziz.belhadjsayar@etud.univ-evry.fr}{aziz.belhadjsayar@etud.univ-evry.fr} \\
-    \textcolor{blue}{\faMapMarker}  Paris, France &
-    \textcolor{blue}{\faGithub} \href{https://github.com/azizbelhadjsayar}{github.com/azizbelhadjsayar} \\
+    \textcolor{blue}{\faPhone} \textbf{+33 6 52 64 32 02} &
+    \textcolor{blue}{\faLinkedin} \href{https://linkedin.com/in/azizbelhadjsayar}{\textbf{linkedin.com/in/azizbelhadjsayar}} &
+    \textcolor{blue}{\faEnvelope} \href{mailto:aziz.belhadjsayar@etud.univ-evry.fr}{\textbf{aziz.belhadjsayar@etud.univ-evry.fr}} \\
+    \textcolor{blue}{\faMapMarker}  \textbf{Paris, France} &
+    \textcolor{blue}{\faGithub} \href{https://github.com/azizbelhadjsayar}{\textbf{github.com/azizbelhadjsayar}} \\
 \end{tabular*}
 }
 \end{tcolorbox}
@@ -93,7 +96,7 @@ Currently pursuing a Master’s degree in \textbf{Software Engineering for the W
 \textbf{Université Paris-Saclay} & \textbf{Paris, France \faMapMarker} \\
 \textbf{MSc 1 – Software Engineering for the Web} & \textbf{2024 -- 2025 \faCalendar} \\
 \end{tabular*}
-\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{blue}{$\rightarrow$}]
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{blue}{\faArrowCircleRight}]
     \item Courses: Software Engineering, Web Development, Databases
 \end{itemize}
 
@@ -179,54 +182,59 @@ Currently pursuing a Master’s degree in \textbf{Software Engineering for the W
 \href{https://www.udemy.com/course/angular-complete-guide/}{Angular Complete Guide – Udemy}
 
 
+% ==== Skills ====
+% ==== Skills (The fix is here) ====
+\SkillsSection
+\vspace{-0.1cm} % Reduce space after the header box to keep it tight
+
+\noindent\parbox[t]{\textwidth}{ % <-- Encapsulate entire block for flow isolation
+    \tcbset{
+        on line,
+        colback=gray!20,
+        colframe=gray!60,
+        arc=4pt,
+        % Tighter padding and height for a sleek look
+        top=1pt, bottom=1pt, 
+        left=4pt, right=4pt,
+        height=16pt,
+        valign=center,
+        baseline,
+        % Allows width to adjust to content while setting a minimum for small words
+        width=auto,
+        box align=center
+    }
+
+    \noindent\parbox{\textwidth}{ % Ensures the list starts flush left and handles wrapping correctly
+        \tcbox{Python}\hskip 3pt%
+        \tcbox{Java}\hskip 3pt%
+        \tcbox{C\#}\hskip 3pt%
+        \tcbox{SQL}\hskip 3pt%
+        \tcbox{JavaScript}\hskip 3pt%
+        \tcbox{Angular}\hskip 3pt%
+        \tcbox{Flask}\hskip 3pt%
+        \tcbox{Streamlit}\hskip 3pt%
+        \tcbox{OpenCV}\hskip 3pt%
+        \tcbox{MediaPipe}\hskip 3pt%
+        \tcbox{Git/GitHub}\hskip 3pt%
+        \tcbox{Docker}\hskip 3pt%
+        \tcbox{SQLite}\hskip 3pt%
+        \tcbox{MySQL}\hskip 3pt%
+        \tcbox{Excel}\hskip 3pt%
+        \tcbox{Power BI}\hskip 3pt%
+        \tcbox{Problem Solving}\hskip 3pt%
+        \tcbox{Teamwork}\hskip 3pt%
+        \tcbox{Communication}\hskip 3pt%
+        \tcbox{Time Management}%
+    }
+} % <-- End of the encapsulation block
+
+% Clean space before Languages header
+\vspace{0.7cm}
+
 % ==== Languages ====
 \LanguagesSection
 \textbf{English:} C2 – \href{https://cert.efset.org/6YsT6y}{\underline{EF SET C2} \faLink} \textbf{ | }
 \textbf{French:} C2 – \href{https://drive.google.com/file/d/1yojzT_8XB7gIulaIKh8TSYeOl8NBXxpR/view}{\underline{TCF C2} \faLink} \textbf{ | }
 \textbf{Arabic:} Native
 
-% ==== Skills ====
-% ==== Skills ====
-\SectionBox{SKILLS}
-\vspace{0.1cm}
-\tcbset{
-    on line,
-    colback=gray!20,
-    colframe=gray!60,
-    arc=4pt,
-    % Tighter padding and height for a sleek look
-    top=1pt, bottom=1pt, 
-    left=4pt, right=4pt,
-    height=16pt,
-    valign=center,
-    baseline,
-    % Allows width to adjust to content while setting a minimum for small words
-    width=auto,
-    box align=center
-}
-
-\noindent\parbox{\textwidth}{ % Ensures the list starts flush left and handles wrapping correctly
-\tcbox{Python}\hskip 3pt%
-\tcbox{Java}\hskip 3pt%
-\tcbox{C\#}\hskip 3pt%
-\tcbox{SQL}\hskip 3pt%
-\tcbox{JavaScript}\hskip 3pt%
-\tcbox{Angular}\hskip 3pt%
-\tcbox{Flask}\hskip 3pt%
-\tcbox{Streamlit}\hskip 3pt%
-\tcbox{OpenCV}\hskip 3pt%
-\tcbox{MediaPipe}\hskip 3pt%
-\tcbox{Git/GitHub}\hskip 3pt%
-\tcbox{Docker}\hskip 3pt%
-\tcbox{SQLite}\hskip 3pt%
-\tcbox{MySQL}\hskip 3pt%
-\tcbox{Excel}\hskip 3pt%
-\tcbox{Power BI}\hskip 3pt%
-\tcbox{Problem Solving}\hskip 3pt%
-\tcbox{Teamwork}\hskip 3pt%
-\tcbox{Communication}\hskip 3pt%
-\tcbox{Time Management}%
-}
-
-\vspace{-0.3cm}
 \end{document}
