@@ -46,23 +46,22 @@
 \pagestyle{empty} 
 
 % ==== Photo ====
-% ==== Photo (Rounded on right side) ====
-\begin{textblock*}{3.6cm}(16.2cm,0.7cm)
+% ==== Photo (Right-side corners rounded) ====
+\begin{textblock*}{3.5cm}(16.5cm,0.83cm)
 \begin{tcolorbox}[
-    colback=blue!10,         % same background as header
-    colframe=blue!10,        % no visible border difference
-    boxrule=0pt,             % remove border line
-    enhanced,                % allows per-corner customization
-    sharp corners=north west,% top-left corner sharp
-    sharp corners=south west,% bottom-left corner sharp
-    rounded corners=north east,% top-right rounded
-    rounded corners=south east,% bottom-right rounded
-    arc=12pt,                % roundness amount
+    colback=white,
+    colframe=white,
+    boxrule=0pt,
+    enhanced,
     width=3.5cm,
     height=3.5cm,
-    center, valign=center
+    arc=12pt,
+    top=0pt, bottom=0pt, left=0pt, right=0pt,
+    sharp corners=north west,
+    sharp corners=south west,
+    clip, % <- important, this clips the content (image) to the shape
 ]
-\includegraphics[width=3.4cm]{Profil-removebg.png}
+\includegraphics[width=3.5cm,height=3.5cm]{Profil-removebg.png}
 \end{tcolorbox}
 \end{textblock*}
 
