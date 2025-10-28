@@ -13,10 +13,8 @@
 \usepackage{graphicx}
 \usepackage[absolute,overlay]{textpos}
 \usepackage{titlesec}
-\usepackage{tcolorbox} % ✅ Added for rounded colored boxes
-
+\usepackage{tcolorbox} % ✅ For rounded colored boxes
 \usepackage{fontawesome}
-\usepackage{xcolor}
 
 \setlength{\parindent}{0pt}
 
@@ -36,7 +34,7 @@
 \vspace{-1pt}
 }
 
-% ==== Section commands with same style ====
+% ==== Section commands ====
 \newcommand{\ProfileSection}[0]{\SectionBox{PROFILE}}
 \newcommand{\EducationSection}[0]{\SectionBox{EDUCATION}}
 \newcommand{\ExperienceSection}[0]{\SectionBox{PROFESSIONAL EXPERIENCE}}
@@ -48,30 +46,36 @@
 \pagestyle{empty} 
 
 % ==== Photo ====
-\begin{textblock*}{3cm}(17cm,0.5cm)
-\includegraphics[width=3cm]{Profil-removebg.png}
+\begin{textblock*}{3cm}(16cm,0.33cm)
+\includegraphics[width=4cm]{Profil-removebg.png}
 \end{textblock*}
 
-% ==== Header ====
-{\Huge\bfseries AZIZ BELHADJ SAYAR}\\[10pt]
-{\fontsize{18pt}{18pt}\selectfont Computer Science Student}\\
+% ==== Header inside a rounded box ====
+\begin{tcolorbox}[
+    colback=blue!10,       % background color
+    colframe=blue!15,      % border color
+    arc=10pt,              % rounded corners (all sides)
+    boxrule=0pt,           % no visible border
+    width=\textwidth,      % full page width
+    left=10pt, right=10pt, top=8pt, bottom=6pt
+]
+{\Huge\bfseries AZIZ BELHADJ SAYAR}\\[8pt]
+{\fontsize{18pt}{18pt}\selectfont Computer Science Student}\\[0pt]
 
-\vspace{-0.1cm}
-% ==== Contact ====
 \renewcommand{\arraystretch}{0.9}
 \setlength{\tabcolsep}{6pt}
-\noindent
 {\fontsize{9.5}{10}\selectfont
 \begin{tabular*}{0.6\textwidth}{@{\extracolsep{\fill}} l l l}
-    \faPhone +33 6 52 64 32 02 &
-    \faLinkedin \href{https://linkedin.com/in/azizbelhadjsayar}{linkedin.com/in/azizbelhadjsayar} &
-    \faEnvelope \href{mailto:aziz.belhadjsayar@etud.univ-evry.fr}{aziz.belhadjsayar@etud.univ-evry.fr} \\
-    \faMapMarker Paris, France &
-    \faGithub \href{https://github.com/azizbelhadjsayar}{github.com/azizbelhadjsayar} \\
+    \faPhone +33 6 52 64 32 02 &
+    \faLinkedin \href{https://linkedin.com/in/azizbelhadjsayar}{linkedin.com/in/azizbelhadjsayar} &
+    \faEnvelope \href{mailto:aziz.belhadjsayar@etud.univ-evry.fr}{aziz.belhadjsayar@etud.univ-evry.fr} \\
+    \faMapMarker Paris, France &
+    \faGithub \href{https://github.com/azizbelhadjsayar}{github.com/azizbelhadjsayar} \\
 \end{tabular*}
 }
+\end{tcolorbox}
 
-\vspace{-0.1cm}
+\vspace{-0.4cm}
 
 % ==== Profile ====
 \ProfileSection
