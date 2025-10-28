@@ -14,18 +14,26 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{titlesec}
 
-
 \usepackage{fontawesome}
 \usepackage{xcolor}
 
-
 \setlength{\parindent}{0pt}
+
+% ==== Colored section titles ====
 \titleformat{\section}
-  {\large\bfseries}
+  {\large\bfseries\color{black}} % Default color, overridden by *colored commands below
   {}
   {0pt}
   {}[\vspace{-0.2cm}\rule{\textwidth}{2pt}]
 \titlespacing*{\section}{0pt}{15pt}{0pt}
+
+% Colored section commands
+\newcommand{\ProfileSection}[0]{\section*{\textcolor{blue}{Profile}}}
+\newcommand{\EducationSection}[0]{\section*{\textcolor{red}{Education}}}
+\newcommand{\ExperienceSection}[0]{\section*{\textcolor{green}{Professional Experience}}}
+\newcommand{\ProjectsSection}[0]{\section*{\textcolor{orange}{Projects}}}
+\newcommand{\CertificationsSection}[0]{\section*{\textcolor{purple}{Certifications}}}
+\newcommand{\LanguagesSection}[0]{\section*{\textcolor{teal}{Languages}}}
 
 \begin{document}
 \pagestyle{empty} 
@@ -43,7 +51,7 @@
 \renewcommand{\arraystretch}{0.9}
 \setlength{\tabcolsep}{6pt}
 \noindent
-{\fontsize{9.5}{10}\selectfont  % 8pt font with 10pt line spacing
+{\fontsize{9.5}{10}\selectfont
 \begin{tabular*}{0.6\textwidth}{@{\extracolsep{\fill}} l l l}
     \faPhone +33 6 52 64 32 02 & 
     \faMapMarker Paris, France & 
@@ -57,12 +65,12 @@
 \vspace{-0.1cm}
 
 % ==== Profile ====
-\section*{Profile}
+\ProfileSection
 Motivated and detail-oriented student passionate about Business Intelligence and software development.  
 Currently pursuing a Master’s degree in \textbf{Software Engineering for the Web} at \textbf{Université Paris-Saclay}.
 
 % ==== Education ====
-\section*{Education}
+\EducationSection
 \noindent
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
 \textbf{Université Paris-Saclay} & \textbf{Paris, France \faMapMarker} \\
@@ -86,7 +94,7 @@ Currently pursuing a Master’s degree in \textbf{Software Engineering for the W
 \end{itemize}
 
 % ==== Experience ====
-\section*{Professional Experience}
+\ExperienceSection
 \noindent
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
 \textbf{Tech Solutions} & \textbf{Paris, France \faMapMarker} \\
@@ -99,7 +107,7 @@ Currently pursuing a Master’s degree in \textbf{Software Engineering for the W
 \end{itemize}
 
 % ==== Projects ====
-\section*{Projects}
+\ProjectsSection
 \noindent
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
 \textbf{Interactive Dashboard (Python, Streamlit)} \href{https://github.com/azizbelhadjsayar/dashboard-data}{\textcolor{blue}{\faGithub}} & \textbf{2024 \faCalendar} \\
@@ -136,8 +144,7 @@ Currently pursuing a Master’s degree in \textbf{Software Engineering for the W
 \end{itemize}
 
 % ==== Certifications ====
-\section*{Certifications}
-
+\CertificationsSection
 \textbf{Data Analysis} \\
 \href{https://www.coursera.org/professional-certificates/google-data-analytics}{\textbf{Google Data Analytics Professional Certificate}} \textbf{ | }
 \href{https://www.datacamp.com/courses/data-visualization-with-python}{\textbf{Data Visualization with Python – DataCamp}} \textbf{ | }
@@ -153,10 +160,10 @@ Currently pursuing a Master’s degree in \textbf{Software Engineering for the W
 \textbf{Software Development} \\
 \href{https://www.coursera.org/specializations/python}{\textbf{Python for Everybody – University of Michigan}} \textbf{ | }
 \href{https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/}{\textbf{JavaScript Algorithms \& Data Structures – freeCodeCamp}} \textbf{ | }
-\href{https://www.udemy.com/course/angular-complete-guide/}{\textbf{Angular Complete Guide – Udemy}}
+\href{https://www.udemy.com/course/angular-complete-guide/}{\textbf{Angular Complete Guide – Udemy}} 
 
 % ==== Languages ====
-\section*{Languages}
+\LanguagesSection
 \textbf{English:} C2 – \href{https://cert.efset.org/6YsT6y}{\underline{EF SET C2} \faLink} \textbf{ | }
 \textbf{French:} C2 – \href{https://www.france-education-international.fr/test/dalf}{\underline{TCF C2} \faLink} \textbf{ | }
 \textbf{Arabic:} Native
