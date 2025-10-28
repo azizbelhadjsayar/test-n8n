@@ -15,6 +15,8 @@
 \usepackage{titlesec}
 \usepackage{tcolorbox} % ✅ For rounded colored boxes
 \usepackage{fontawesome}
+\usepackage{contour}
+\contourlength{0.6pt} % thickness of the outline
 
 \setlength{\parindent}{0pt}
 
@@ -26,7 +28,7 @@
     colframe=blue!15,   % border same as background
     boxrule=0pt,        % no visible border
     arc=8pt,            % rounded corners
-    left=6pt, right=6pt, top=2pt, bottom=2pt,
+    left=5pt, right=5pt, top=4pt, bottom=4pt,
     width=\textwidth,   % full width
 ]
 \textbf{\large #1}
@@ -46,8 +48,8 @@
 \pagestyle{empty} 
 
 % ==== Photo ====
-\begin{textblock*}{3cm}(16.5cm,0.83cm)
-\includegraphics[width=3.5cm]{Profil-removebg.png}
+\begin{textblock*}{3cm}(16.7cm,0.85cm)
+\includegraphics[width=3.3cm]{Profil-removebg.png}
 \end{textblock*}
 
 % ==== Header inside a rounded box ====
@@ -60,17 +62,17 @@
     left=10pt, right=10pt, top=8pt, bottom=6pt
 ]
 {\Huge\bfseries AZIZ BELHADJ SAYAR}\\[8pt]
-{\fontsize{18pt}{18pt}\selectfont Computer Science Student}\\[0pt]
+\contour{white}{{\fontsize{18pt}{18pt}\selectfont\textcolor{blue}{Computer Science Student}}}\\[-5pt]
 
 \renewcommand{\arraystretch}{0.9}
 \setlength{\tabcolsep}{6pt}
 {\fontsize{9.5}{10}\selectfont
 \begin{tabular*}{0.6\textwidth}{@{\extracolsep{\fill}} l l l}
-    \faPhone +33 6 52 64 32 02 &
-    \faLinkedin \href{https://linkedin.com/in/azizbelhadjsayar}{linkedin.com/in/azizbelhadjsayar} &
-    \faEnvelope \href{mailto:aziz.belhadjsayar@etud.univ-evry.fr}{aziz.belhadjsayar@etud.univ-evry.fr} \\
-    \faMapMarker  Paris, France &
-    \faGithub \href{https://github.com/azizbelhadjsayar}{github.com/azizbelhadjsayar} \\
+    \textcolor{blue}{\faPhone} +33 6 52 64 32 02 &
+    \textcolor{blue}{\faLinkedin} \href{https://linkedin.com/in/azizbelhadjsayar}{linkedin.com/in/azizbelhadjsayar} &
+    \textcolor{blue}{\faEnvelope} \href{mailto:aziz.belhadjsayar@etud.univ-evry.fr}{aziz.belhadjsayar@etud.univ-evry.fr} \\
+    \textcolor{blue}{\faMapMarker}  Paris, France &
+    \textcolor{blue}{\faGithub} \href{https://github.com/azizbelhadjsayar}{github.com/azizbelhadjsayar} \\
 \end{tabular*}
 }
 \end{tcolorbox}
@@ -91,7 +93,6 @@ Currently pursuing a Master’s degree in \textbf{Software Engineering for the W
 \end{tabular*}
 \begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{blue}{$\rightarrow$}]
     \item Courses: Software Engineering, Web Development, Databases
-    \item Project: Full-stack web application using Python and Angular
 \end{itemize}
 
 \vspace{0.2cm}
@@ -103,7 +104,6 @@ Currently pursuing a Master’s degree in \textbf{Software Engineering for the W
 \end{tabular*}
 \begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{red}{$\rightarrow$}]
     \item Courses: Business Intelligence, SQL, Data Analysis
-    \item Project: Interactive dashboard using Python
 \end{itemize}
 
 % ==== Experience ====
@@ -116,7 +116,6 @@ Currently pursuing a Master’s degree in \textbf{Software Engineering for the W
 \begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{green}{$\rightarrow$}]
     \item Developed an internal web application using Python and Angular
     \item Optimized SQL database performance
-    \item Collaborated with the BI team for data analysis
 \end{itemize}
 
 % ==== Projects ====
@@ -157,29 +156,78 @@ Currently pursuing a Master’s degree in \textbf{Software Engineering for the W
 \end{itemize}
 
 % ==== Certifications ====
+% ==== Certifications ====
 \CertificationsSection
-\textbf{Data Analysis} \\
-\href{https://www.coursera.org/professional-certificates/google-data-analytics}{\textbf{Google Data Analytics Professional Certificate}} \textbf{ | }
-\href{https://www.datacamp.com/courses/data-visualization-with-python}{\textbf{Data Visualization with Python – DataCamp}} \textbf{ | }
-\href{https://www.hackerrank.com/skills-verification/sql_intermediate}{\textbf{SQL (Intermediate) – HackerRank}}
-\vspace{0.2cm}
+\href{https://www.coursera.org/professional-certificates/google-data-analytics}{Google Data Analytics Professional Certificate} 
+\textcolor{blue}{\Large •} 
+\href{https://www.datacamp.com/courses/data-visualization-with-python}{Data Visualization with Python – DataCamp} 
+\textcolor{blue}{\Large •} 
+\href{https://www.hackerrank.com/skills-verification/sql_intermediate}{SQL (Intermediate) – HackerRank} 
+\textcolor{blue}{\Large •} 
+\href{https://www.kaggle.com/learn/intro-to-machine-learning}{Introduction to Machine Learning – Kaggle} 
+\textcolor{blue}{\Large •} 
+\href{https://www.coursera.org/learn/machine-learning}{Machine Learning – Stanford University} 
+\textcolor{blue}{\Large •} 
+\href{https://www.coursera.org/learn/neural-networks-deep-learning}{Neural Networks and Deep Learning – DeepLearning.AI} 
+\textcolor{blue}{\Large •} 
+\href{https://www.coursera.org/specializations/python}{Python for Everybody – University of Michigan} 
+\textcolor{blue}{\Large •} 
+\href{https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/}{JavaScript Algorithms & Data Structures – freeCodeCamp} 
+\textcolor{blue}{\Large •} 
+\href{https://www.udemy.com/course/angular-complete-guide/}{Angular Complete Guide – Udemy}
 
-\textbf{Machine Learning / AI} \\
-\href{https://www.kaggle.com/learn/intro-to-machine-learning}{\textbf{Introduction to Machine Learning – Kaggle}} \textbf{ | }
-\href{https://www.coursera.org/learn/machine-learning}{\textbf{Machine Learning – Stanford University}} \textbf{ | }
-\href{https://www.coursera.org/learn/neural-networks-deep-learning}{\textbf{Neural Networks and Deep Learning – DeepLearning.AI}}
-\vspace{0.2cm}
-
-\textbf{Software Development} \\
-\href{https://www.coursera.org/specializations/python}{\textbf{Python for Everybody – University of Michigan}} \textbf{ | }
-\href{https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/}{\textbf{JavaScript Algorithms \& Data Structures – freeCodeCamp}} \textbf{ | }
-\href{https://www.udemy.com/course/angular-complete-guide/}{\textbf{Angular Complete Guide – Udemy}} 
 
 % ==== Languages ====
 \LanguagesSection
 \textbf{English:} C2 – \href{https://cert.efset.org/6YsT6y}{\underline{EF SET C2} \faLink} \textbf{ | }
 \textbf{French:} C2 – \href{https://drive.google.com/file/d/1yojzT_8XB7gIulaIKh8TSYeOl8NBXxpR/view}{\underline{TCF C2} \faLink} \textbf{ | }
 \textbf{Arabic:} Native
+
+% ==== Skills ====
+% ==== Skills ====
+\SectionBox{SKILLS}
+
+\tcbset{
+    on line,
+    colback=gray!20,
+    colframe=gray!60,
+    arc=4pt,
+    % Tighter padding and height for a sleek look
+    top=1pt, bottom=1pt, 
+    left=4pt, right=4pt,
+    height=16pt,
+    valign=center,
+    baseline,
+    % Allows width to adjust to content while setting a minimum for small words
+    width=auto,
+    minimum width=55pt,
+    box align=center
+}
+
+\vspace{-4pt} % Slightly reduces vertical space before the skill list
+
+\noindent\parbox{\textwidth}{ % Ensures the list starts flush left and handles wrapping correctly
+\tcbox{Python}\hskip 3pt%
+\tcbox{Java}\hskip 3pt%
+\tcbox{C\#}\hskip 3pt%
+\tcbox{SQL}\hskip 3pt%
+\tcbox{JavaScript}\hskip 3pt%
+\tcbox{Angular}\hskip 3pt%
+\tcbox{Flask}\hskip 3pt%
+\tcbox{Streamlit}\hskip 3pt%
+\tcbox{OpenCV}\hskip 3pt%
+\tcbox{MediaPipe}\hskip 3pt%
+\tcbox{Git/GitHub}\hskip 3pt%
+\tcbox{Docker}\hskip 3pt%
+\tcbox{SQLite}\hskip 3pt%
+\tcbox{MySQL}\hskip 3pt%
+\tcbox{Excel}\hskip 3pt%
+\tcbox{Power BI}\hskip 3pt%
+\tcbox{Problem Solving}\hskip 3pt%
+\tcbox{Teamwork}\hskip 3pt%
+\tcbox{Communication}\hskip 3pt%
+\tcbox{Time Management}%
+}
 
 \vspace{-0.3cm}
 \end{document}
