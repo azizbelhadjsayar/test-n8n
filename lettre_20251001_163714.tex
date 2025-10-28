@@ -5,7 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{array}
-% \usepackage{xcolor}
+\usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{pifont}
@@ -228,11 +228,11 @@ Currently pursuing a Master’s degree in \textbf{Software Engineering for the W
     }
 } % <-- End of the encapsulation block
 
-% Clean space before Languages header
-\vspace{0.7cm}
 
 % ==== Languages ====
 \LanguagesSection
+% ==== Languages Content (Forced to single line without warning) ====
+\hbadness=10000 % <-- Temporarily ignores horizontal spacing warnings
 \textbf{English:} C2 – \href{https://cert.efset.org/6YsT6y}{\underline{EF SET C2} \faLink} \textbf{ | }
 \textbf{French:} C2 – \href{https://drive.google.com/file/d/1yojzT_8XB7gIulaIKh8TSYeOl8NBXxpR/view}{\underline{TCF C2} \faLink} \textbf{ | }
 \textbf{Arabic:} Native
