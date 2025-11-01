@@ -6,7 +6,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{array}
 \usepackage{xcolor}
-\definecolor{amazonYellow}{HTML}{ff9900}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{pifont}
@@ -14,10 +13,10 @@
 \usepackage{graphicx}
 \usepackage[absolute,overlay]{textpos}
 \usepackage{titlesec}
-\usepackage{tcolorbox}
+\usepackage{tcolorbox} % ✅ For rounded colored boxes
 \usepackage{fontawesome}
 \usepackage{contour}
-\contourlength{1pt}
+\contourlength{0.6pt}
 
 \setlength{\parindent}{0pt}
 
@@ -40,16 +39,16 @@
 }
 
 % ==== Section commands ====
-\newcommand{\ProfileSection}[0]{\SectionBox{PROFILE}}
-\newcommand{\EducationSection}[0]{\SectionBox{EDUCATION}}
-\newcommand{\ExperienceSection}[0]{\SectionBox{PROFESSIONAL EXPERIENCE}}
-\newcommand{\ProjectsSection}[0]{\SectionBox{PROJECTS}}
+\newcommand{\ProfileSection}[0]{\SectionBox{PROFIL}}
+\newcommand{\EducationSection}[0]{\SectionBox{FORMATION}}
+\newcommand{\ExperienceSection}[0]{\SectionBox{EXPÉRIENCE PROFESSIONNELLE}}
+\newcommand{\ProjectsSection}[0]{\SectionBox{PROJETS}}
 \newcommand{\CertificationsSection}[0]{\SectionBox{CERTIFICATIONS}}
-\newcommand{\SkillsSection}[0]{\SectionBox{SKILLS}}
-\newcommand{\LanguagesSection}[0]{\SectionBox{LANGUAGES}}
+\newcommand{\SkillsSection}[0]{\SectionBox{COMPÉTENCES TECHNIQUES}}
+\newcommand{\LanguagesSection}[0]{\SectionBox{LANGUES}}
 
 \begin{document}
-\pagestyle{empty}
+\pagestyle{empty} 
 
 % ==== Photo ====
 \begin{textblock*}{3cm}(16.7cm,0.84cm)
@@ -66,17 +65,17 @@
     left=10pt, right=10pt, top=8pt, bottom=6pt
 ]
 {\Huge\bfseries AZIZ BELHADJ SAYAR}\\[8pt]
-\contour{black}{{\fontsize{18pt}{18pt}\selectfont\textcolor{amazonYellow}{Computer Science Student}}}\\[-5pt]
+\contour{white}{{\fontsize{18pt}{18pt}\selectfont\textcolor{blue}{Software Engineering Student}}}\\[-5pt]
 
 \renewcommand{\arraystretch}{0.9}
 \setlength{\tabcolsep}{6pt}
 {\fontsize{9}{10}\selectfont
 \begin{tabular*}{0.6\textwidth}{@{\extracolsep{\fill}} l l l}
-    \textcolor{amazonYellow}{\faPhone} \textbf{+33 6 52 64 32 02} &
-    \textcolor{amazonYellow}{\faLinkedin} \href{https://linkedin.com/in/azizbelhadjsayar}{\textbf{linkedin.com/in/azizbelhadjsayar}} &
-    \textcolor{amazonYellow}{\faEnvelope} \href{mailto:aziz.belhadjsayar@etud.univ-evry.fr}{\textbf{aziz.belhadjsayar@etud.univ-evry.fr}} \\
-    \textcolor{amazonYellow}{\faMapMarker}  \textbf{Évry, France} &
-    \textcolor{amazonYellow}{\faGithub} \href{https://github.com/azizbelhadjsayar}{\textbf{github.com/azizbelhadjsayar}} \\
+    \textcolor{blue}{\faPhone} \textbf{+33 6 52 64 32 02} &
+    \textcolor{blue}{\faLinkedin} \href{https://linkedin.com/in/azizbelhadjsayar}{\textbf{linkedin.com/in/azizbelhadjsayar}} &
+    \textcolor{blue}{\faEnvelope} \href{mailto:aziz.belhadjsayar@etud.univ-evry.fr}{\textbf{aziz.belhadjsayar@etud.univ-evry.fr}} \\
+    \textcolor{blue}{\faMapMarker}  \textbf{Évry, France} &
+    \textcolor{blue}{\faGithub} \href{https://github.com/azizbelhadjsayar}{\textbf{github.com/azizbelhadjsayar}} \\
 \end{tabular*}
 }
 \end{tcolorbox}
@@ -85,96 +84,101 @@
 
 % ==== Profile ====
 \ProfileSection
-Curious and fast-learning \textbf{Computer Science student} passionate about building \textbf{scalable, impactful software}.  
-I believe Amazon is the perfect place for motivated students to take their \textbf{first big step in tech}, learn from the best, and grow through real-world challenges.
+Étudiant motivé et passionné par le \textbf{développement web}, je recherche un stage de fin d’année dans le cadre de mon \textbf{Master 1 MIAGE – Ingénierie Logicielle pour le Web} à l’\textbf{Université d’Évry – Paris-Saclay}.  
+Le stage proposé par le \textbf{CEA} est pour moi une belle opportunité d’appliquer mes compétences en programmation et de découvrir un environnement technologique innovant.  
+Curieux et à l’apprentissage rapide, je souhaite m’investir pleinement dans la conception d’IHM performantes et intuitives, en m’adaptant rapidement à de nouveaux outils comme \textbf{React} ou \textbf{VTK.js}.
 
 
 % ==== Education ====
 \EducationSection
 \noindent
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
-\textbf{Université Évry Paris-Saclay} & \textbf{Évry, France \faMapMarker} \\
-\textbf{Master’s Degree – First year in Computer Science, Software Engineering} & \textbf{September 2025 -- Present \faCalendar} \\
+\textbf{Université d’Évry – Paris-Saclay} & \textbf{Évry, Île-de-France, France \faMapMarker} \\
+\textbf{\href{https://www.universite-paris-saclay.fr/formation/master/methodes-informatiques-appliquees-la-gestion-des-entreprises-miage/m1-miage-ingenierie-logicielle-pour-le-web#presentation}{Master 1 MIAGE – Ingénierie Logicielle pour le Web \faLink\ }} & \textbf{Septembre 2025 -- Présent \faCalendar} \\
 \end{tabular*}
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{blue}{\faArrowCircleRight}]
+    \item Formation axée sur le développement web, les bases de données avancées, les systèmes distribués et l’analyse de données.
+\end{itemize}
+
 
 \vspace{0.2cm}
 
 \noindent
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
-\textbf{IHEC Carthage} & \textbf{Tunis, Tunisia \faMapMarker} \\
-\textbf{Bachelor’s in Business Computing (Business Intelligence track)} & \textbf{September 2022 -- June 2025 \faCalendar} \\
+\textbf{Institut des Hautes Études Commerciales de Carthage} & \textbf{Carthage, Tunisie \faMapMarker} \\
+\textbf{Licence en informatique de gestion} & \textbf{2022 -- 2025 \faCalendar} \\
 \end{tabular*}
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{blue}{\faArrowCircleRight}]
+    \item Major de promotion en première et deuxième année, avec un parcours académique d’excellence.  
+    \item Formation alliant développement informatique, analyse de données et conception de solutions décisionnelles.
+\end{itemize}
+
 
 % ==== Experience ====
 \ExperienceSection
 \noindent
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
-\textbf{Amaris Consulting} & \textbf{Ariana, Tunisia \faMapMarker} \\
-\textbf{Final-year Internship – SMART NETWORK MONITORING} & \textbf{February 2025 -- May 2025 \faCalendar} \\
+\textbf{Amaris Consulting} & \textbf{Ariana, Tunisie \faMapMarker} \\
+\textbf{Stagiaire en ingénierie des données et BI (PFE)} & \textbf{Février 2025 -- Mai 2025 \faCalendar} \\
 \end{tabular*}
-\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{amazonYellow}{\faArrowCircleRight}]
-    \item Centralized and processed heterogeneous data sources (\textbf{Oracle, PostgreSQL, Excel}) in \textbf{Microsoft Fabric} to build a unified and scalable data lakehouse.
-    \item Developed and deployed predictive models within \textbf{Microsoft Fabric} to enhance network quality analysis.
-    \item Designed interactive \textbf{Power BI} dashboards and a \textbf{Streamlit} web application for business-oriented insights.
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{blue}{\faArrowCircleRight}]
+    \item Conception d’une solution de surveillance prédictive du réseau mobile, intégrant la collecte, le traitement et l’analyse des données dans Microsoft Fabric.
+    \item Création d’un Data Warehouse unifié alimenté par des sources hétérogènes et connecté à des rapports interactifs Power BI pour le suivi de la qualité réseau.
+    \item Développement et déploiement d’une application web Streamlit pour la visualisation des indicateurs et la prédiction des anomalies.
 \end{itemize}
+
 
 % ==== Projects ====
 \ProjectsSection
-
-% --- Job Matcher ---
 \noindent
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
-\textbf{Job Matcher – AI-Powered Recruitment Tool (Python, Flask, Scikit-learn)} & \textbf{Nov 2024 \faCalendar} \\
+\textbf{Smart Network Monitoring (Python, Streamlit, Power BI)} \href{https://github.com/azizbelhadjsayar/network-monitoring}{\textcolor{blue}{\faGithub}} & \textbf{2024 \faCalendar} \\
 \end{tabular*}
-\begin{itemize}[leftmargin=*,itemsep=1pt,parsep=0pt,topsep=1pt,label=\textcolor{amazonYellow}{\faArrowCircleRight}]
-    \item Developed a web app that matches CVs with job descriptions using cosine similarity and machine learning.
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{blue}{\faArrowCircleRight}]
+    \item Full data pipeline with predictive ML models (Random Forest, XGBoost) and rolling KPIs (2G/3G/4G).
 \end{itemize}
 
 \vspace{0.2cm}
-
-% --- Amazon Reviews Sentiment Analysis ---
 \noindent
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
-\textbf{Amazon Reviews Sentiment Analysis (Python, NLTK, Transformers)} & \textbf{Nov 2024 \faCalendar} \\
+\textbf{Interactive Dashboard (Python, Streamlit)} \href{https://github.com/azizbelhadjsayar/dashboard-data}{\textcolor{blue}{\faGithub}} & \textbf{2024 \faCalendar} \\
 \end{tabular*}
-\begin{itemize}[leftmargin=*,itemsep=1pt,parsep=0pt,topsep=1pt,label=\textcolor{amazonYellow}{\faArrowCircleRight}]
-    \item Built an NLP pipeline using RoBERTa and VADER models to analyze Amazon reviews and extract insights.
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{blue}{\faArrowCircleRight}]
+    \item Designed an interactive app for data exploration, 3D visualizations, and geographic maps.
 \end{itemize}
 
 \vspace{0.2cm}
-
-% --- Rental and Item Management Website ---
 \noindent
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
-\textbf{Rental and Item Management Website (PHP, JavaScript, MySQL, Leaflet)} & \textbf{Feb 2024 -- Apr 2024 \faCalendar} \\
+\textbf{Gesture-Controlled Game (Python, OpenCV, MediaPipe)} \href{https://github.com/azizbelhadjsayar/gesture-game}{\textcolor{blue}{\faGithub}} & \textbf{2023 \faCalendar} \\
 \end{tabular*}
-\begin{itemize}[leftmargin=*,itemsep=1pt,parsep=0pt,topsep=1pt,label=\textcolor{amazonYellow}{\faArrowCircleRight}]
-    \item Created a dynamic website with user registration, rental management, interactive maps, and an admin dashboard.
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{blue}{\faArrowCircleRight}]
+    \item Developed a shooting game controlled entirely by hand gestures using real-time computer vision.
 \end{itemize}
 
+\vspace{0.2cm}
+\noindent
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{HR Management App (C\#, .NET, SQL Server)} \href{https://github.com/azizbelhadjsayar/hr-management}{\textcolor{blue}{\faGithub}} & \textbf{2023 \faCalendar} \\
+\end{tabular*}
+\begin{itemize}[leftmargin=*,itemsep=1pt,topsep=1pt,parsep=0pt,label=\textcolor{blue}{\faArrowCircleRight}]
+    \item Complete CRUD operations for employees, departments, and job positions with secure database connection.
+\end{itemize}
 
 % ==== Certifications ====
 \CertificationsSection
-\href{https://www.datacamp.com/promo/17m-learners-sale-25}{Data Engineer Associate Certificate}
-\textcolor{amazonYellow}{\Large •}
-\href{https://www.coursera.org/account/accomplishments/verify/CXZ7IOI0TD6F}{Crash Course on Python}
-\textcolor{amazonYellow}{\Large •}
-\href{https://www.credly.com/badges/6df22061-95a2-4c54-a76c-295cfe455591}{Databases and SQL for Data Science}
-\textcolor{amazonYellow}{\Large •}
-\href{https://www.coursera.org/account/accomplishments/verify/3R5XEN72GNZS}{Introduction to Git and GitHub}
-\textcolor{amazonYellow}{\Large •}
-\href{https://www.coursera.org/account/accomplishments/verify/JXBWSBRYUNU3}{Using Python to Interact with the Operating System}
-\textcolor{amazonYellow}{\Large •}
-\href{https://www.coursera.org/account/accomplishments/verify/SM8XZEP2K78Q}{Fundamentals of Java Programming}
-\textcolor{amazonYellow}{\Large •}
-\href{https://www.coursera.org/account/accomplishments/verify/DQSBZLER2K6L}{Object-Oriented Design}
-\textcolor{amazonYellow}{\Large •}
-\href{https://www.coursera.org/account/accomplishments/verify/N6M9GZWNTDHZ}{Software Engineering: Modeling Software Systems using UML}
-\textcolor{amazonYellow}{\Large •}
-\href{https://www.coursera.org/account/accomplishments/specialization/7SKBCLWCU6HL}{Machine Learning – Stanford University}
+\href{https://www.coursera.org/professional-certificates/google-data-analytics}{Google Data Analytics – Coursera} 
+\textcolor{blue}{\Large •} 
+\href{https://www.kaggle.com/learn/intro-to-machine-learning}{Intro to Machine Learning – Kaggle} 
+\textcolor{blue}{\Large •} 
+\href{https://www.datacamp.com/courses/data-visualization-with-python}{Data Visualization with Python – DataCamp}
+\textcolor{blue}{\Large •}
+\href{https://www.hackerrank.com/skills-verification/sql_intermediate}{SQL (Intermediate) – HackerRank}
+\textcolor{blue}{\Large •}
+\href{https://www.udemy.com/course/angular-complete-guide/}{Angular Complete Guide – Udemy}
+\textcolor{blue}{\Large •}
+\href{https://www.coursera.org/specializations/python}{Python for Everybody – University of Michigan}
 
-
-% ==== Skills ====
 % ==== Skills ====
 \SkillsSection
 \vspace{0.2cm}
@@ -184,8 +188,7 @@ I believe Amazon is the perfect place for motivated students to take their \text
         colback=gray!20,
         colframe=gray!60,
         arc=4pt,
-        top=1pt, bottom=1pt,
-        left=4pt, right=4pt,
+        top=1pt, bottom=1pt, left=4pt, right=4pt,
         height=16pt,
         valign=center,
         baseline,
@@ -196,26 +199,26 @@ I believe Amazon is the perfect place for motivated students to take their \text
     \noindent\parbox{\textwidth}{
         \tcbox{Python}\hskip 3pt%
         \tcbox{Java}\hskip 3pt%
-        \tcbox{C\# / .NET}\hskip 3pt%
-        \tcbox{SQL / MySQL / SQLite}\hskip 3pt%
-        \tcbox{Git / GitHub}\hskip 3pt%
-        \tcbox{Object-Oriented Programming}\hskip 3pt%
-        \tcbox{Data Structures \& Algorithms}\hskip 3pt%
-        \tcbox{Software Engineering}\hskip 3pt%
-        \tcbox{UML Modeling}\hskip 3pt%
-        \tcbox{Machine Learning}\hskip 3pt%
-        \tcbox{Deep Learning}\hskip 3pt%
-        \tcbox{Pandas / NumPy}\hskip 3pt%
-        \tcbox{Web Development}\hskip 3pt%
-        \tcbox{HTML / CSS / JavaScript}\hskip 3pt%
-        \tcbox{APIs / JSON / AJAX}\hskip 3pt%
+        \tcbox{C\#}\hskip 3pt%
+        \tcbox{JavaScript}\hskip 3pt%
+        \tcbox{Angular}\hskip 3pt%
+        \tcbox{Flask}\hskip 3pt%
+        \tcbox{Streamlit}\hskip 3pt%
+        \tcbox{SQL}\hskip 3pt%
+        \tcbox{Power BI}\hskip 3pt%
+        \tcbox{Docker}\hskip 3pt%
+        \tcbox{Git/GitHub}\hskip 3pt%
+        \tcbox{OpenCV}\hskip 3pt%
+        \tcbox{MediaPipe}\hskip 3pt%
+        \tcbox{TensorFlow}\hskip 3pt%
+        \tcbox{SQLite}\hskip 3pt%
+        \tcbox{MySQL}\hskip 3pt%
+        \tcbox{Microsoft Fabric}\hskip 3pt%
         \tcbox{Problem Solving}\hskip 3pt%
-        \tcbox{Analytical Thinking}\hskip 3pt%
         \tcbox{Teamwork}\hskip 3pt%
-        \tcbox{Adaptability}%
+        \tcbox{Communication}%
     }
 }
-
 
 % ==== Languages ====
 \LanguagesSection
